@@ -1,0 +1,32 @@
+[
+  {
+    "id": "black",
+    "name": "Tea Tree & Charcoal",
+    "price": 6.0
+  },
+  {
+    "id": "pink",
+    "name": "Jasmine Gardenia",
+    "price": 6.0
+  },
+  {
+    "id": "white",
+    "name": "Sea Salt Kelp",
+    "price": 7.0
+  },
+  {
+    "id": "coffee",
+    "name": "Cocoa Mint",
+    "price": 5.0
+  },
+  {
+    "id": "bright pink",
+    "name": "Lavender",
+    "price": 4.0
+  },
+  {
+    "id": "brown",
+    "name": "Oats & Honey",
+    "price": 6.0
+  }
+]
