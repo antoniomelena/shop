@@ -108,6 +108,12 @@ span.nav-span {
   height: 30px;
   padding-top: 5px;
 }
+.logo {
+  width: 30px;
+  height: auto;
+  margin-left: 1em;
+  margin-top: 0.1em;
+}
 
 /* *********** HOME ************* */
 .header {

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../App";
-import black from "../images/black.jpg";
+import logo from "../images/logo.png";
 import cartImg from "../images/cart.svg";
 
 const Nav = () => {
@@ -16,7 +16,9 @@ const Nav = () => {
 
   return (
     <header>
-      <div className="logo">{/* <img src={black} /> */}Logo</div>
+      <div className="logo">
+        <img src={logo} className="logo" />
+      </div>
       <div className="mobile" onClick={handleClick}>
         ☰
       </div>
