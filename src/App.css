@@ -263,7 +263,14 @@ button.check-out-btn {
     display: flex;
     justify-content: space-between;
   }
-  .navbar,
+  .navbar {
+    all: unset;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-right: 1em;
+    justify-content: space-evenly;
+  }
   .navbar.active {
     all: unset;
     display: flex;
