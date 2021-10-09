@@ -64,7 +64,6 @@ header {
 .mobile {
   display: flex;
   align-items: center;
-  /* color: var(--txt-color); */
   position: absolute;
   height: 100%;
   top: 0;
@@ -86,16 +85,6 @@ nav a {
 nav a:hover {
   color: var(--txt-color);
 }
-/* .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-} */
-/* .nav {
-  width: 40%;
-  display: flex;
-  justify-content: space-around;
-} */
 
 span.nav-span {
   cursor: pointer;
