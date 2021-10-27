@@ -14,9 +14,6 @@ html {
 }
 :root {
   --bg-header: rgba(245, 245, 245, 0.815);
-  /* --bg-color: #8c5f61;
-  --bg-color-accent: #5f8c74;
-  --bg-color-three: #5f788c; */
   --bg-color: #b88078;
   --bg-color-accent: #78b8a0;
   --bg-color-three: #7890b8;
@@ -150,7 +147,7 @@ span.nav-span {
 /* icon  */
 .iframe-icons {
   display: flex;
-  background: var(--bg-header);
+  background: var(--bg-color-three);
   height: 40vh;
   padding: 4em;
   justify-content: space-evenly;
@@ -188,9 +185,6 @@ span.nav-span {
 }
 .hero input[type="checkbox"] {
   margin: 0 3px;
-}
-.stockText {
-  text-transform: lowercase;
 }
 .intro-content {
   width: 65%;
