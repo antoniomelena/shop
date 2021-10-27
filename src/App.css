@@ -13,10 +13,14 @@ html {
   font-size: 16px;
 }
 :root {
-  --bg-ws: rgba(245, 245, 245, 0.815);
-  --bg-color: rgba(208, 233, 225, 0.918);
-  --bg-color-accent: rgba(214, 186, 162, 0.87);
-  --txt-color: rgb(95, 74, 70);
+  --bg-header: rgba(245, 245, 245, 0.815);
+  /* --bg-color: #8c5f61;
+  --bg-color-accent: #5f8c74;
+  --bg-color-three: #5f788c; */
+  --bg-color: #b88078;
+  --bg-color-accent: #78b8a0;
+  --bg-color-three: #7890b8;
+  /* --txt-color: rgb(95, 74, 70); */
 }
 body {
   min-height: 100vh;
@@ -36,7 +40,7 @@ img {
 
 /* *********** NAV ************* */
 header {
-  background: var(--bg-ws);
+  background: var(--bg-header);
   text-align: center;
   align-items: center;
   position: fixed;
@@ -55,7 +59,7 @@ header {
   text-align: center;
   top: 100%;
   left: 0;
-  background: var(--bg-ws);
+  /* background: var(--bg-color-accent); */
   width: 100%;
 }
 .navbar {
@@ -83,7 +87,7 @@ nav a {
   cursor: pointer;
 }
 nav a:hover {
-  color: var(--txt-color);
+  color: var(--bg-color);
 }
 
 span.nav-span {
@@ -108,7 +112,7 @@ span.nav-span {
 .header {
   height: 100vh;
   display: grid;
-  background-color: rgb(245, 245, 245);
+  /* background-color: var(--bg-color-accent); */
   text-align: justify;
   padding: 2em;
 }
@@ -117,7 +121,7 @@ span.nav-span {
   font-size: 2.2vmax;
 }
 .color {
-  color: var(--txt-color);
+  color: var(--bg-color);
 }
 
 /* youtube video  */
@@ -128,7 +132,7 @@ span.nav-span {
   justify-content: center;
   align-items: center;
   min-height: 60vh;
-  background-color: seashell;
+  background-color: var(--bg-color-accent);
   text-align: center;
 }
 .iframe-container iframe {
@@ -146,7 +150,7 @@ span.nav-span {
 /* icon  */
 .iframe-icons {
   display: flex;
-  background: rgba(245, 245, 245, 0.945);
+  background: var(--bg-header);
   height: 40vh;
   padding: 4em;
   justify-content: space-evenly;
@@ -171,7 +175,7 @@ span.nav-span {
   margin-top: 3em;
   color: #fff;
   text-align: center;
-  background-color: rgb(214, 186, 162);
+  background-color: var(--bg-color-accent);
   border-radius: 4px;
   padding: 0.5em;
 }
@@ -220,10 +224,11 @@ span.nav-span {
   font-size: 1.2rem;
   cursor: pointer;
   color: #000;
+  /* color: red; */
   margin-right: 0.2em;
 }
 .fa-icon:hover {
-  color: cornflowerblue;
+  color: var(--bg-color-three);
 }
 
 /* *********** CART ************* */
@@ -252,7 +257,8 @@ input[type="number"] {
 .form-btn {
   cursor: pointer;
   padding: 0.5em;
-  background-color: rgba(209, 207, 207, 0.932);
+  background-color: var(--bg-color);
+  color: white;
   font-size: 1erm;
   border-radius: 4px;
   margin-left: 1em;
@@ -274,7 +280,8 @@ button.check-out-btn {
   cursor: pointer;
   width: 100%;
   font-size: 1.5rem;
-  background: cornflowerblue;
+  background-color: var(--bg-color-three);
+  color: #fff;
   border-radius: 4px;
 }
 .cartFooter {
