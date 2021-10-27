@@ -137,6 +137,11 @@ span.nav-span {
 .iframe-text {
   width: 80%;
 }
+.iframe-text p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: lowercase;
+  font-weight: 100;
+}
 
 /* icon  */
 .iframe-icons {
@@ -160,13 +165,28 @@ span.nav-span {
 }
 
 .hero {
-  width: 75%;
+  width: 55%;
   max-width: 80%;
   margin: 0 auto;
+  margin-top: 3em;
   color: #fff;
   text-align: center;
   background-color: rgb(214, 186, 162);
-  padding: 1em;
+  border-radius: 4px;
+  padding: 0.5em;
+}
+.hero input[type="text"] {
+  text-indent: 10px;
+  min-width: 88%;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+.hero input[type="checkbox"] {
+  margin: 0 3px;
+}
+.stockText {
+  text-transform: lowercase;
 }
 .intro-content {
   width: 65%;
@@ -195,6 +215,15 @@ span.nav-span {
 }
 .detail-img {
   max-width: 100%;
+}
+.fa-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #000;
+  margin-right: 0.2em;
+}
+.fa-icon:hover {
+  color: cornflowerblue;
 }
 
 /* *********** CART ************* */

@@ -2,31 +2,43 @@
   {
     "id": "black",
     "name": "Tea Tree & Charcoal",
-    "price": 6.0
+    "price": 6.99,
+    "votes": 7,
+    "stocked": true
   },
   {
     "id": "pink",
     "name": "Jasmine Gardenia",
-    "price": 6.0
+    "price": 6.99,
+    "votes": 4,
+    "stocked": true
   },
   {
     "id": "white",
     "name": "Sea Salt Kelp",
-    "price": 7.0
+    "price": 7.99,
+    "votes": 9,
+    "stocked": false
   },
   {
     "id": "coffee",
     "name": "Cocoa Mint",
-    "price": 5.0
+    "price": 5.99,
+    "votes": 1,
+    "stocked": true
   },
   {
     "id": "bright pink",
     "name": "Lavender",
-    "price": 4.0
+    "price": 4.99,
+    "votes": 2,
+    "stocked": true
   },
   {
     "id": "brown",
     "name": "Oats & Honey",
-    "price": 6.0
+    "price": 6.99,
+    "votes": 2,
+    "stocked": false
   }
 ]

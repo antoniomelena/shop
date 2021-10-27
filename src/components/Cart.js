@@ -17,7 +17,7 @@ const Cart = () => {
   const cartCalculation = () => {
     let sum = 0;
     Object.keys(cart).map((name, idx) => {
-      let product = Catalog.find((prod) => prod.name == name);
+      let product = Catalog.find((prod) => prod.name === name);
       let price = product.price;
       let total = Object.values(cart)[idx] * price;
       sum += total;
@@ -34,13 +34,14 @@ const Cart = () => {
     cartCalculation();
   }, [cart]);
 
+  console.log(cartArr);
   return (
     <div className="cart">
       {cartArr.map((item, idx) => (
         <div key={idx} className="cardfb">
           {item[1] > 0 && (
             <Card
-              selItem={Catalog.find((x) => x.name == Object.keys(cart)[idx])}
+              selItem={Catalog.find((x) => x.name === Object.keys(cart)[idx])}
               initialQuantity={cartValues[idx]}
             />
           )}
@@ -63,7 +64,7 @@ const Cart = () => {
 const Card = (props) => {
   const { initialQuantity, selItem } = props;
   const name = selItem.name;
-  const product = Catalog.find((prod) => prod.name == name);
+  const product = Catalog.find((prod) => prod.name === name);
   const price = product.price;
   const { cart, setCart } = useContext(UserContext);
   const [quantity, setQuantity] = useState(initialQuantity);
@@ -109,9 +110,7 @@ const Card = (props) => {
 
   return (
     <div className="cart--card">
-      {/* <div className="cart--card-img"> */}
       {find(selItem.id)}
-      {/* </div> */}
       <div className="card-section">
         <div className="card--cart-txt">{selItem.name}</div>
         <div className="card--cart-txt">${selItem.price.toFixed(2)}</div>

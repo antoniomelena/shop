@@ -1,6 +1,5 @@
 import React, { useState, createContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";

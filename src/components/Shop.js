@@ -1,68 +1,51 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Catalog from "../catalog.json";
-import black from "../images/black.jpg";
-import coffee from "../images/coffee.jpg";
-import brown from "../images/brown.jpg";
-import brightpink from "../images/brightpink.jpg";
-import pink from "../images/pink.jpg";
-import white from "../images/white.jpg";
+import ShopCard from "./ShopCard";
+import SearchBar from "./SearchBar";
 
 const Shop = () => {
   const [items, setItems] = useState(Catalog);
+  const [filterText, setFilterText] = useState("");
 
-  const find = (param) => {
-    switch (param) {
-      case "black":
-        return (
-          <div className="icon">
-            <img src={black} alt="black" className="responsive" />
-          </div>
-        );
-        break;
-      case "coffee":
-        return (
-          <div className="icon">
-            <img src={coffee} alt="coffee" className="responsive" />
-          </div>
-        );
-        break;
-      case "pink":
-        return (
-          <div className="icon">
-            <img src={pink} alt="pink" className="responsive" />
-          </div>
-        );
-        break;
-      case "white":
-        return (
-          <div className="icon">
-            <img src={white} alt="white" className="responsive" />
-          </div>
-        );
-        break;
-      case "bright pink":
-        return (
-          <div className="icon">
-            <img src={brightpink} alt="brightpink" className="responsive" />
-          </div>
-        );
-        break;
-      case "brown":
-        return (
-          <div className="icon">
-            <img src={brown} alt="brown" className="responsive" />
-          </div>
-        );
-        break;
-      default:
-        return null;
-    }
+  const handleUpVote = (productId) => {
+    const newItems = items.map((item) => {
+      if (item.id === productId) {
+        return Object.assign({}, item, {
+          votes: item.votes + 1,
+        });
+      } else {
+        return item;
+      }
+    });
+    setItems(newItems);
   };
+
+  const handleFilterChange = (filterText) => {
+    setFilterText(filterText);
+  };
+
+  const newItems = items.sort((a, b) => b.votes - a.votes);
+
+  let cards = [];
+  items.forEach((item) => {
+    if (item.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
+      return;
+    }
+    cards.push(
+      <ShopCard
+        key={item.id}
+        id={item.id}
+        name={item.name}
+        votes={item.votes}
+        price={item.price.toFixed(2)}
+        onVote={handleUpVote}
+      />
+    );
+  });
 
   return (
     <div className="shop">
-      <div className="hero">
+      {/* <div className="hero">
         <div className="intro-content">
           <p>Lorem ipsum dolor sit amet.</p>
           <h2>
@@ -70,18 +53,12 @@ const Shop = () => {
             sequi inventore odio maxime!
           </h2>
         </div>
-      </div>
-      <div className="container">
-        {items.map((item) => (
-          <div key={item.id} className="card">
-            <Link to={process.env.PUBLIC_URL + `/shop/${item.id}`}>
-              {find(item.id)}
-              <h3>{item.name}</h3>
-              <p>from ${item.price.toFixed(2)}</p>
-            </Link>
-          </div>
-        ))}
-      </div>
+      </div> */}
+      <SearchBar
+        filterText={filterText}
+        handleFilterChange={handleFilterChange}
+      />
+      <div className="container">{cards}</div>
     </div>
   );
 };
