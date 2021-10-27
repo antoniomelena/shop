@@ -30,9 +30,9 @@ const Home = () => {
           height="315"
           src="https://www.youtube.com/embed/QCsx2ax39sM"
           title="YouTube Video Player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <div className="iframe-text">
           <h2>Lorem Ipsum</h2>
