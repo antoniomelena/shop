@@ -149,7 +149,7 @@ span.nav-span {
   display: flex;
   background: var(--bg-color-three);
   height: 40vh;
-  padding: 4em;
+  padding: 2em;
   justify-content: space-evenly;
 }
 
