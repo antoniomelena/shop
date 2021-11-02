@@ -150,9 +150,14 @@ span.nav-span {
   background: var(--bg-color-three);
   height: 40vh;
   padding: 2em;
+  align-items: center;
   justify-content: space-evenly;
 }
-
+.iframe-icons img {
+  height: 100px;
+  width: auto;
+  max-width: 100%;
+}
 /* *********** SHOP ************* */
 .shop {
   margin-top: 2em;
