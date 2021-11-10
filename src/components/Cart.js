@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import { UserContext } from "../App";
 import Catalog from "../catalog.json";
-import black from "../images/black.jpg";
-import coffee from "../images/coffee.jpg";
-import brown from "../images/brown.jpg";
-import brightpink from "../images/brightpink.jpg";
-import pink from "../images/pink.jpg";
-import white from "../images/white.jpg";
+import black from "../images/black.webp";
+import coffee from "../images/coffee.webp";
+import brown from "../images/brown.webp";
+import brightpink from "../images/brightpink.webp";
+import pink from "../images/pink.webp";
+import white from "../images/white.webp";
 
 const Cart = () => {
   const { cart, setCart } = useContext(UserContext);
@@ -80,24 +80,18 @@ const Card = (props) => {
     switch (param) {
       case "black":
         return <img src={black} alt="black" className="responsive" />;
-        break;
       case "coffee":
         return <img src={coffee} alt="coffee" className="responsive" />;
-        break;
       case "pink":
         return <img src={pink} alt="pink" className="responsive" />;
-        break;
       case "white":
         return <img src={white} alt="white" className="responsive" />;
-        break;
       case "bright pink":
         return (
           <img src={brightpink} alt="bright pink" className="responsive" />
         );
-        break;
       case "brown":
         return <img src={brown} alt="brown" className="responsive" />;
-        break;
       default:
         return null;
     }

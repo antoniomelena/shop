@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -11,13 +11,13 @@ export const App = () => {
   const [cart, setCart] = useState({});
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <UserContext.Provider value={{ cart, setCart }}>
         <Nav />
         <Switch>
           <Route
             exact
-            path={process.env.PUBLIC_URL + "/shop/:id"}
+            path={process.env.PUBLIC_URL + "/products/:id"}
             component={ItemDetail}
           />
           <Route path={`${process.env.PUBLIC_URL}/products`} component={Shop} />
@@ -25,7 +25,7 @@ export const App = () => {
           <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
         </Switch>
       </UserContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
