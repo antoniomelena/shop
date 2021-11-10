@@ -1,7 +1,7 @@
 import React from "react";
-import bpc from "../images/bpcabove.jpg";
-import crueltyFree from "../images/cruelty-free.png";
-import noAddedColors from "../images/no-additives.png";
+import bpc from "../images/bpcabove.webp";
+import crueltyFree from "../images/cruelty-free.webp";
+import noAddedColors from "../images/no-additives.webp";
 
 const Home = () => {
   return (

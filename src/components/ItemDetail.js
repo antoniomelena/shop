@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import Catalog from "../catalog.json";
 import { UserContext } from "../App";
-import black from "../images/black.jpg";
-import coffee from "../images/coffee.jpg";
-import brown from "../images/brown.jpg";
-import brightpink from "../images/brightpink.jpg";
-import pink from "../images/pink.jpg";
-import white from "../images/white.jpg";
+import black from "../images/black.webp";
+import coffee from "../images/coffee.webp";
+import brown from "../images/brown.webp";
+import brightpink from "../images/brightpink.webp";
+import pink from "../images/pink.webp";
+import white from "../images/white.webp";
 
 const ItemDetail = ({ match }) => {
   const { cart, setCart } = useContext(UserContext);

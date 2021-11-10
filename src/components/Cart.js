@@ -64,11 +64,8 @@ const Cart = () => {
 const Card = (props) => {
   const { initialQuantity, selItem } = props;
   const name = selItem.name;
-  const product = Catalog.find((prod) => prod.name === name);
-  const price = product.price;
   const { cart, setCart } = useContext(UserContext);
   const [quantity, setQuantity] = useState(initialQuantity);
-  const [total, setTotal] = useState((price * quantity).toFixed(2));
 
   const handleChange = ({ target }) => {
     setQuantity(target.value);
@@ -76,8 +73,6 @@ const Card = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setCart({ ...cart, [name]: parseInt(quantity) });
-    const num = price * quantity;
-    setTotal(num.toFixed(2));
     document.getElementById("cart-form").reset();
   };
 

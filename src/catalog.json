@@ -3,15 +3,13 @@
     "id": "black",
     "name": "Tea Tree & Charcoal",
     "price": 6.99,
-    "votes": 7,
-    "stocked": true
+    "votes": 7
   },
   {
     "id": "pink",
     "name": "Jasmine Gardenia",
     "price": 6.99,
-    "votes": 4,
-    "stocked": true
+    "votes": 4
   },
   {
     "id": "white",
@@ -24,15 +22,13 @@
     "id": "coffee",
     "name": "Cocoa Mint",
     "price": 5.99,
-    "votes": 1,
-    "stocked": true
+    "votes": 1
   },
   {
     "id": "bright pink",
     "name": "Lavender",
     "price": 4.99,
-    "votes": 2,
-    "stocked": true
+    "votes": 2
   },
   {
     "id": "brown",
