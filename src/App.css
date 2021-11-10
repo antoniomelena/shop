@@ -17,14 +17,13 @@ html {
   --bg-color: #b88078;
   --bg-color-accent: #78b8a0;
   --bg-color-three: #7890b8;
-  /* --txt-color: rgb(95, 74, 70); */
 }
 body {
   min-height: 100vh;
 }
 a {
   text-decoration: none;
-  color: rgb(128, 128, 128);
+  color: rgb(68, 68, 68);
 }
 img {
   max-width: 100%;
