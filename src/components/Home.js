@@ -15,7 +15,7 @@ const Home = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="responsive rtext">
+        <div className="rtext">
           <h1>Lorem ipsum dolor.</h1>
           <h1 className="color">Lorem dolor.</h1>
         </div>

@@ -34,7 +34,7 @@ const Nav = () => {
           <li className="nav-link">
             <NavLink
               exact
-              to={process.env.PUBLIC_URL + "/shop"}
+              to={process.env.PUBLIC_URL + "/products"}
               activeClassName="active"
             >
               Shop
