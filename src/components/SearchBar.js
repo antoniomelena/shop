@@ -14,10 +14,6 @@ const SearchBar = ({ filterText, handleFilterChange }) => {
           value={filterText}
           onChange={handleChange}
         />
-        {/* <p className="stockText">
-          Show In Stock Items
-          <input type="checkbox" checked={stockOnly} />
-        </p> */}
       </form>
     </div>
   );

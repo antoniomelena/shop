@@ -14,42 +14,46 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
       case "black":
         return (
           <div className="icon">
-            <img src={black} alt="black" className="responsive" />
+            <img src={black} alt="black soap bar" className="responsive" />
           </div>
         );
         break;
       case "coffee":
         return (
           <div className="icon">
-            <img src={coffee} alt="coffee" className="responsive" />
+            <img src={coffee} alt="coffee soap bar" className="responsive" />
           </div>
         );
         break;
       case "pink":
         return (
           <div className="icon">
-            <img src={pink} alt="pink" className="responsive" />
+            <img src={pink} alt="pink soap bar" className="responsive" />
           </div>
         );
         break;
       case "white":
         return (
           <div className="icon">
-            <img src={white} alt="white" className="responsive" />
+            <img src={white} alt="white soap bar" className="responsive" />
           </div>
         );
         break;
       case "bright pink":
         return (
           <div className="icon">
-            <img src={brightpink} alt="brightpink" className="responsive" />
+            <img
+              src={brightpink}
+              alt="brightpink soap bar"
+              className="responsive"
+            />
           </div>
         );
         break;
       case "brown":
         return (
           <div className="icon">
-            <img src={brown} alt="brown" className="responsive" />
+            <img src={brown} alt="brown soap bar" className="responsive" />
           </div>
         );
         break;

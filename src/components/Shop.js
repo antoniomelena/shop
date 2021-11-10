@@ -45,15 +45,6 @@ const Shop = () => {
 
   return (
     <div className="shop">
-      {/* <div className="hero">
-        <div className="intro-content">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui a optio
-            sequi inventore odio maxime!
-          </h2>
-        </div>
-      </div> */}
       <SearchBar
         filterText={filterText}
         handleFilterChange={handleFilterChange}
