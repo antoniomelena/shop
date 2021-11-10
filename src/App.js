@@ -20,9 +20,9 @@ export const App = () => {
             path={process.env.PUBLIC_URL + "/shop/:id"}
             component={ItemDetail}
           />
-          <Route path={process.env.PUBLIC_URL + "/shop"} component={Shop} />
-          <Route path={process.env.PUBLIC_URL + "/cart"} component={Cart} />
-          <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+          <Route path={`${process.env.PUBLIC_URL}/products`} component={Shop} />
+          <Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart} />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
         </Switch>
       </UserContext.Provider>
     </BrowserRouter>
