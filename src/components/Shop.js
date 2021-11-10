@@ -27,7 +27,7 @@ const Shop = () => {
   const newItems = items.sort((a, b) => b.votes - a.votes);
 
   let cards = [];
-  items.forEach((item) => {
+  newItems.forEach((item) => {
     if (item.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
       return;
     }
