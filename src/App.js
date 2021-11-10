@@ -17,12 +17,16 @@ export const App = () => {
         <Switch>
           <Route
             exact
-            path={process.env.PUBLIC_URL + "/products/:id"}
+            path={"/products/:id"}
+            // path={process.env.PUBLIC_URL + "/products/:id"}
             component={ItemDetail}
           />
-          <Route path={`${process.env.PUBLIC_URL}/products`} component={Shop} />
-          <Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart} />
-          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+          {/* <Route path={`${process.env.PUBLIC_URL}/products`} component={Shop} /> */}
+          <Route path={"/products"} component={Shop} />
+          {/* <Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart} /> */}
+          <Route path={"/cart"} component={Cart} />
+          {/* <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} /> */}
+          <Route exact path={"/"} component={Home} />
         </Switch>
       </UserContext.Provider>
     </HashRouter>

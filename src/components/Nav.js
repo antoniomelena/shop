@@ -25,7 +25,8 @@ const Nav = () => {
           <li className="nav-link">
             <NavLink
               exact
-              to={`${process.env.PUBLIC_URL}/`}
+              to={"/"}
+              // to={`${process.env.PUBLIC_URL}/`}
               activeClassName="active"
             >
               Home
@@ -34,7 +35,8 @@ const Nav = () => {
           <li className="nav-link">
             <NavLink
               exact
-              to={`${process.env.PUBLIC_URL}/products`}
+              to={"/products"}
+              // to={`${process.env.PUBLIC_URL}/products`}
               activeClassName="active"
             >
               Shop
@@ -42,7 +44,8 @@ const Nav = () => {
           </li>
         </ul>
         <NavLink
-          to={`${process.env.PUBLIC_URL}/cart`}
+          to={"/cart"}
+          // to={`${process.env.PUBLIC_URL}/cart`}
           exact={true}
           className="cart-symbol"
           activeClassName="active"
