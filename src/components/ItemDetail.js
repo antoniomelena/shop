@@ -38,42 +38,36 @@ const ItemDetail = ({ match }) => {
             <img src={black} alt="black" className="responsive" />
           </div>
         );
-        break;
       case "coffee":
         return (
           <div className="detail-img">
             <img src={coffee} alt="coffee" className="responsive" />
           </div>
         );
-        break;
       case "pink":
         return (
           <div className="detail-img">
             <img src={pink} alt="pink" className="responsive" />
           </div>
         );
-        break;
       case "white":
         return (
           <div className="detail-img">
             <img src={white} alt="white" className="responsive" />
           </div>
         );
-        break;
       case "bright pink":
         return (
           <div className="detail-img">
             <img src={brightpink} alt="bright pink" className="responsive" />
           </div>
         );
-        break;
       case "brown":
         return (
           <div className="detail-img">
             <img src={brown} alt="brown" className="responsive" />
           </div>
         );
-        break;
       default:
         return null;
     }

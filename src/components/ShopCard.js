@@ -67,7 +67,7 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
   };
   return (
     <div className="card">
-      <Link to={process.env.PUBLIC_URL + `/shop/${id}`}>
+      <Link to={`/products/${id}`}>
         {find(id)}
         <h3>{name}</h3>
         <p>from ${price}</p>
