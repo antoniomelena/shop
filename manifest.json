@@ -3,17 +3,17 @@
   "name": "React Shop",
   "icons": [
     {
-      "src": "creulty-free.png",
+      "src": "antonio.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     },
     {
-      "src": "creulty-free.png",
+      "src": "antonio.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "creulty-free.png",
+      "src": "antonio.png",
       "type": "image/png",
       "sizes": "512x512"
     }
