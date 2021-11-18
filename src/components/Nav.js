@@ -1,11 +1,13 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { UserContext } from "../App";
-// import logo from "../images/logo.png";
-import cartImg from "../images/cart.svg";
+// import logo from "../images/m.png";
+import logo from "../images/logo.svg";
+// import cartImg from "../images/cart.svg";
 
 const Nav = () => {
-  const { cart, setCart } = useContext(UserContext);
+  const { cart } = useContext(UserContext);
   const entries = Object.entries(cart);
   const values = Object.values(cart);
   const [click, setClick] = useState(false);
@@ -16,46 +18,53 @@ const Nav = () => {
 
   return (
     <header>
-      <div className="logo">{/* <img src={logo} className="logo" /> */}</div>
-      <div className="mobile" onClick={handleClick}>
-        ☰
+      <div className="container row">
+        <button className="nav-toggle btn" onClick={handleClick}>
+          ☰
+        </button>
+        <Link exact to={"/"} className="logo">
+          <img src={logo} alt="logo" />
+        </Link>
+        <nav className={click ? "nav nav--visible" : "nav"}>
+          <ul className="nav__list nav__list--primary">
+            <li className="nav__item">
+              <NavLink
+                exact
+                to={"/"}
+                className="nav__link"
+                activeClassName="active"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                exact
+                to={"/products"}
+                className="nav__link"
+                activeClassName="active"
+              >
+                Shop
+              </NavLink>
+            </li>
+          </ul>
+          <ul className="nav__list nav__list--secondary">
+            <li className="nav__item">
+              <NavLink
+                exact
+                to={"/cart"}
+                className="nav__link nav__link--relative"
+                activeClassName="active"
+              >
+                <AiOutlineShoppingCart />
+                <span className="nav__span">
+                  {entries.length === 0 ? 0 : values.reduce((a, b) => a + b)}
+                </span>
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav className={click ? "navbar active" : "navbar"}>
-        <ul className="nav">
-          <li className="nav-link">
-            <NavLink
-              exact
-              to={"/"}
-              // to={`${process.env.PUBLIC_URL}/`}
-              activeClassName="active"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-link">
-            <NavLink
-              exact
-              to={"/products"}
-              // to={`${process.env.PUBLIC_URL}/products`}
-              activeClassName="active"
-            >
-              Shop
-            </NavLink>
-          </li>
-        </ul>
-        <NavLink
-          to={"/cart"}
-          // to={`${process.env.PUBLIC_URL}/cart`}
-          exact={true}
-          className="cart-symbol"
-          activeClassName="active"
-        >
-          <span className="nav-span">
-            {entries.length === 0 ? 0 : values.reduce((a, b) => a + b)}
-          </span>
-          <img src={cartImg} alt="cart" id="nav-img" />
-        </NavLink>
-      </nav>
     </header>
   );
 };

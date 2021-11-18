@@ -6,15 +6,15 @@ const SearchBar = ({ filterText, handleFilterChange }) => {
   };
 
   return (
-    <div className="hero">
-      <form>
-        <input
-          type="text"
-          placeholder="Search.."
-          value={filterText}
-          onChange={handleChange}
-        />
-      </form>
+    <div className="search-bar">
+      <input
+        className="search-bar__input"
+        type="text"
+        placeholder="search.."
+        value={filterText}
+        onChange={handleChange}
+        aria-label="search"
+      />
     </div>
   );
 };

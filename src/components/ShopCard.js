@@ -1,5 +1,5 @@
 import React from "react";
-import { FaThumbsUp } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import black from "../images/black.webp";
 import coffee from "../images/coffee.webp";
@@ -12,51 +12,25 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
   const find = (param) => {
     switch (param) {
       case "black":
-        return (
-          <div className="icon">
-            <img src={black} alt="black soap bar" className="responsive" />
-          </div>
-        );
-        break;
+        return <img src={black} alt="black soap bar" className="responsive" />;
       case "coffee":
         return (
-          <div className="icon">
-            <img src={coffee} alt="coffee soap bar" className="responsive" />
-          </div>
+          <img src={coffee} alt="coffee soap bar" className="responsive" />
         );
-        break;
       case "pink":
-        return (
-          <div className="icon">
-            <img src={pink} alt="pink soap bar" className="responsive" />
-          </div>
-        );
-        break;
+        return <img src={pink} alt="pink soap bar" className="responsive" />;
       case "white":
-        return (
-          <div className="icon">
-            <img src={white} alt="white soap bar" className="responsive" />
-          </div>
-        );
-        break;
+        return <img src={white} alt="white soap bar" className="responsive" />;
       case "bright pink":
         return (
-          <div className="icon">
-            <img
-              src={brightpink}
-              alt="brightpink soap bar"
-              className="responsive"
-            />
-          </div>
+          <img
+            src={brightpink}
+            alt="brightpink soap bar"
+            className="responsive"
+          />
         );
-        break;
       case "brown":
-        return (
-          <div className="icon">
-            <img src={brown} alt="brown soap bar" className="responsive" />
-          </div>
-        );
-        break;
+        return <img src={brown} alt="brown soap bar" className="responsive" />;
       default:
         return null;
     }
@@ -67,18 +41,33 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
   };
   return (
     <div className="card">
-      <Link to={`/products/${id}`}>
-        {find(id)}
-        <h3>{name}</h3>
-        <p>from ${price}</p>
-      </Link>
-      <div>
+      <div className="heart">
         <a onClick={handleUpVote}>
-          <FaThumbsUp className="fa-icon" />
+          <AiFillHeart className="heart-icon" />
         </a>
-        {votes}
+        <p>{votes}</p>
       </div>
+      <Link to={`/products/${id}`}>
+        <div className="img-box">{find(id)}</div>
+        <div className="card-text">
+          <h4>{name}</h4>
+          <p>from ${price}</p>
+        </div>
+      </Link>
     </div>
+    // <div className="card">
+    //   <Link to={`/products/${id}`}>
+    //     {find(id)}
+    //     <h3>{name}</h3>
+    //     <p>from ${price}</p>
+    //   </Link>
+    //   <div>
+    //     <a onClick={handleUpVote}>
+    //       <AiFillHeart className="heart-icon" />
+    //     </a>
+    //     <p>{votes}</p>
+    //   </div>
+    // </div>
   );
 };
 

@@ -45,11 +45,13 @@ const Shop = () => {
 
   return (
     <div className="shop">
-      <SearchBar
-        filterText={filterText}
-        handleFilterChange={handleFilterChange}
-      />
-      <div className="container">{cards}</div>
+      <div className="container">
+        <SearchBar
+          filterText={filterText}
+          handleFilterChange={handleFilterChange}
+        />
+        <div className="grid">{cards}</div>
+      </div>
     </div>
   );
 };

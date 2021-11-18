@@ -12,51 +12,54 @@ const Cart = () => {
   const { cart, setCart } = useContext(UserContext);
   const cartArr = Object.entries(cart);
   const cartValues = Object.values(cart);
-  const [cartTotal, setCartTotal] = useState(null);
+  const [cartTotal, setCartTotal] = useState(0);
 
   const cartCalculation = () => {
     let sum = 0;
-    Object.keys(cart).map((name, idx) => {
+    let keys = Object.keys(cart);
+    keys.forEach((name, idx) => {
       let product = Catalog.find((prod) => prod.name === name);
       let price = product.price;
       let total = Object.values(cart)[idx] * price;
       sum += total;
-      setCartTotal(sum.toFixed(2));
     });
+    setCartTotal(sum);
   };
 
   const checkOut = () => {
     setCart({});
-    setCartTotal(null);
+    setCartTotal(0);
   };
 
   useEffect(() => {
     cartCalculation();
   }, [cart]);
 
-  console.log(cartArr);
   return (
     <div className="cart">
-      {cartArr.map((item, idx) => (
-        <div key={idx} className="cardfb">
-          {item[1] > 0 && (
-            <Card
-              selItem={Catalog.find((x) => x.name === Object.keys(cart)[idx])}
-              initialQuantity={cartValues[idx]}
-            />
-          )}
-        </div>
-      ))}
-      {cartTotal === null ? (
-        <h1 className="empty-cart">Your cart is empty.</h1>
-      ) : (
-        <div className="cartFooter">
-          <div>Total: ${cartTotal}</div>
-          <button className="check-out-btn btn" onClick={checkOut}>
-            Check Out
-          </button>
-        </div>
-      )}
+      <div className="container">
+        {cartArr.map(
+          (item, idx) =>
+            item[1] > 0 && (
+              <Card
+                key={idx}
+                selItem={Catalog.find((x) => x.name === Object.keys(cart)[idx])}
+                initialQuantity={cartValues[idx]}
+              />
+            )
+        )}
+
+        {cartTotal === 0 ? (
+          <h1 className="empty-cart">Your cart is empty.</h1>
+        ) : (
+          <div className="cart__footer">
+            <h4>Total: ${cartTotal.toFixed(2)}</h4>
+            <button className="form__btn check-out__btn btn" onClick={checkOut}>
+              Check Out
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
@@ -72,26 +75,24 @@ const Card = (props) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCart({ ...cart, [name]: parseInt(quantity) });
+    setCart({ ...cart, [name]: parseInt(quantity, 10) });
     document.getElementById("cart-form").reset();
   };
 
   const find = (param) => {
     switch (param) {
       case "black":
-        return <img src={black} alt="black" className="responsive" />;
+        return <img src={black} alt="black" className="detail" />;
       case "coffee":
-        return <img src={coffee} alt="coffee" className="responsive" />;
+        return <img src={coffee} alt="coffee" className="detail" />;
       case "pink":
-        return <img src={pink} alt="pink" className="responsive" />;
+        return <img src={pink} alt="pink" className="detail" />;
       case "white":
-        return <img src={white} alt="white" className="responsive" />;
+        return <img src={white} alt="white" className="detail" />;
       case "bright pink":
-        return (
-          <img src={brightpink} alt="bright pink" className="responsive" />
-        );
+        return <img src={brightpink} alt="bright pink" className="detail" />;
       case "brown":
-        return <img src={brown} alt="brown" className="responsive" />;
+        return <img src={brown} alt="brown" className="detail" />;
       default:
         return null;
     }
@@ -100,7 +101,7 @@ const Card = (props) => {
   return (
     <div className="cart--card">
       {find(selItem.id)}
-      <div className="card-section">
+      <div className="cart__card-text">
         <div className="card--cart-txt">{selItem.name}</div>
         <div className="card--cart-txt">${selItem.price.toFixed(2)}</div>
         <form id="cart-form" className="card-form" onSubmit={handleSubmit}>
@@ -115,7 +116,7 @@ const Card = (props) => {
             onChange={handleChange}
             required
           />
-          <button type="submit" className="form-btn btn">
+          <button type="submit" className="form__btn btn">
             Update
           </button>
         </form>
