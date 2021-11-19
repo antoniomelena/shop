@@ -16,9 +16,8 @@ body {
 }
 
 :root {
-  --bg-header: #fff;
   --bg-color: #000;
-  --bg-color-accent: #78b8a0;
+  --bg-color-accent: #ebacac;
   --bg-color-three: #7890b8;
   --color-black: #000;
   --color-white: #fff;
@@ -63,7 +62,6 @@ section {
 }
 
 header {
-  /* background-color: var(--bg-color-three); */
   padding: 1.25rem 0;
   text-align: center;
 }
