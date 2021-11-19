@@ -2,9 +2,7 @@ import React, { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { UserContext } from "../App";
-// import logo from "../images/m.png";
-import logo from "../images/logo.svg";
-// import cartImg from "../images/cart.svg";
+import logo from "../images/shop-logo.png";
 
 const Nav = () => {
   const { cart } = useContext(UserContext);
@@ -18,7 +16,7 @@ const Nav = () => {
 
   return (
     <header>
-      <div className="container row">
+      <div className="container container--nav row">
         <button className="nav-toggle btn" onClick={handleClick}>
           ☰
         </button>

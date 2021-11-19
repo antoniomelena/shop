@@ -1,16 +1,14 @@
 {
-  "main.css": "static/css/main.cfe7e169.css",
-  "main.css.map": "static/css/main.cfe7e169.css.map",
-  "main.js": "static/js/main.d5eb1b77.js",
-  "main.js.map": "static/js/main.d5eb1b77.js.map",
+  "main.css": "static/css/main.860413ed.css",
+  "main.css.map": "static/css/main.860413ed.css.map",
+  "main.js": "static/js/main.11d1518c.js",
+  "main.js.map": "static/js/main.11d1518c.js.map",
   "static/media/black.webp": "static/media/black.b83e96d7.webp",
-  "static/media/bpcabove.webp": "static/media/bpcabove.c5fdbd6f.webp",
   "static/media/brightpink.webp": "static/media/brightpink.d3910920.webp",
   "static/media/brown.webp": "static/media/brown.2257362a.webp",
-  "static/media/cart.svg": "static/media/cart.0d67d56b.svg",
   "static/media/coffee.webp": "static/media/coffee.9218f3b5.webp",
-  "static/media/cruelty-free.webp": "static/media/cruelty-free.8edb581e.webp",
-  "static/media/no-additives.webp": "static/media/no-additives.db11ebf7.webp",
+  "static/media/logo.svg": "static/media/logo.225594ff.svg",
   "static/media/pink.webp": "static/media/pink.6dadbd15.webp",
+  "static/media/pizza.jpg": "static/media/pizza.153b45be.jpg",
   "static/media/white.webp": "static/media/white.70514197.webp"
 }

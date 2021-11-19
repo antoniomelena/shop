@@ -55,19 +55,6 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
         </div>
       </Link>
     </div>
-    // <div className="card">
-    //   <Link to={`/products/${id}`}>
-    //     {find(id)}
-    //     <h3>{name}</h3>
-    //     <p>from ${price}</p>
-    //   </Link>
-    //   <div>
-    //     <a onClick={handleUpVote}>
-    //       <AiFillHeart className="heart-icon" />
-    //     </a>
-    //     <p>{votes}</p>
-    //   </div>
-    // </div>
   );
 };
 
