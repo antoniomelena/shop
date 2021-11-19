@@ -6,8 +6,8 @@ import coffee from "../images/coffee.webp";
 import brown from "../images/brown.webp";
 import brightpink from "../images/brightpink.webp";
 import pink from "../images/pink.webp";
-// import white from "../images/white.webp";
-import pizza from "../images/pizza.jpg";
+import white from "../images/white.webp";
+// import pizza from "../images/pizza.jpg";
 
 const ItemDetail = ({ match }) => {
   const { cart, setCart } = useContext(UserContext);
@@ -39,8 +39,8 @@ const ItemDetail = ({ match }) => {
       case "pink":
         return <img src={pink} alt="pink" className="detail" />;
       case "white":
-        return <img src={pizza} alt="white" className="detail" />;
-      // return <img src={white} alt="white" className="detail" />;
+        // return <img src={pizza} alt="white" className="detail" />;
+        return <img src={white} alt="white" className="detail" />;
       case "bright pink":
         return <img src={brightpink} alt="bright pink" className="detail" />;
       case "brown":
