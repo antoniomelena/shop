@@ -15,10 +15,10 @@ export const App = () => {
       <UserContext.Provider value={{ cart, setCart }}>
         <Nav />
         <Switch>
-          <Route exact path={"/products/:id"} component={ItemDetail} />
-          <Route path={"/products"} component={Shop} />
-          <Route path={"/cart"} component={Cart} />
-          <Route exact path={"/"} component={Home} />
+          <Route exact path="/products/:id" component={ItemDetail} />
+          <Route path="/products" component={Shop} />
+          <Route path="/cart" component={Cart} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </UserContext.Provider>
     </HashRouter>
