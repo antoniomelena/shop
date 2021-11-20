@@ -453,7 +453,7 @@ a {
 
   /* ***** cart ***** */
   .cart__img {
-    max-width: 230px;
+    width: 230px;
   }
 
   .cart__total {
