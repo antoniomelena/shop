@@ -148,9 +148,9 @@ a {
   transform-origin: left;
 }
 
-.nav__link.active::after {
+/* .nav__link.active::after {
   transform: scaleX(1);
-}
+} */
 
 .nav__link--relative {
   position: relative;
@@ -264,7 +264,6 @@ a {
 }
 
 .search-bar__input {
-  /* flex-grow: 1; */
   font-size: 1rem;
   min-width: 25%;
   padding: 5px 10px;

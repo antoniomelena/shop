@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { UserContext } from "../App";
-import logo from "../images/shop-logo.png";
+import logo from "../images/shop-logo.webp";
 
 const Nav = () => {
   const { cart } = useContext(UserContext);
