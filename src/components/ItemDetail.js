@@ -39,7 +39,6 @@ const ItemDetail = ({ match }) => {
       case "pink":
         return <img src={pink} alt="pink" className="detail" />;
       case "white":
-        // return <img src={pizza} alt="white" className="detail" />;
         return <img src={white} alt="white" className="detail" />;
       case "bright pink":
         return <img src={brightpink} alt="bright pink" className="detail" />;
