@@ -8,7 +8,7 @@ import brightpink from "../images/brightpink.webp";
 import pink from "../images/pink.webp";
 import white from "../images/white.webp";
 
-const ShopCard = ({ id, name, price, votes, onVote }) => {
+let ShopCard = function ({ id, name, price, votes, onVote }) {
   const find = (param) => {
     switch (param) {
       case "black":
@@ -42,9 +42,7 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
   return (
     <div className="card">
       <div className="heart">
-        <a onClick={handleUpVote}>
-          <AiFillHeart className="heart-icon" />
-        </a>
+        <AiFillHeart className="heart-icon" onClick={handleUpVote} />
         <p>{votes}</p>
       </div>
       <Link to={`/products/${id}`}>
