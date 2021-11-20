@@ -17,10 +17,10 @@ const Nav = () => {
   return (
     <header>
       <div className="container container--nav row">
-        <button className="nav-toggle btn" onClick={handleClick}>
+        <button className="nav-toggle btn" onClick={handleClick} type="button">
           ☰
         </button>
-        <Link exact to={"/"} className="logo">
+        <Link exact to="/" className="logo">
           <img src={logo} alt="logo" />
         </Link>
         <nav className={click ? "nav nav--visible" : "nav"}>
@@ -28,7 +28,7 @@ const Nav = () => {
             <li className="nav__item">
               <NavLink
                 exact
-                to={"/"}
+                to="/"
                 className="nav__link"
                 activeClassName="active"
               >
@@ -38,7 +38,7 @@ const Nav = () => {
             <li className="nav__item">
               <NavLink
                 exact
-                to={"/products"}
+                to="/products"
                 className="nav__link"
                 activeClassName="active"
               >
@@ -50,7 +50,7 @@ const Nav = () => {
             <li className="nav__item">
               <NavLink
                 exact
-                to={"/cart"}
+                to="/cart"
                 className="nav__link nav__link--relative"
                 activeClassName="active"
               >
