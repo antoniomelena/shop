@@ -8,7 +8,7 @@ import brightpink from "../images/brightpink.webp";
 import pink from "../images/pink.webp";
 import white from "../images/white.webp";
 
-let ShopCard = function ({ id, name, price, votes, onVote }) {
+const ShopCard = ({ id, name, price, votes, onVote }) => {
   const find = (param) => {
     switch (param) {
       case "black":
