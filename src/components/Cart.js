@@ -38,25 +38,34 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="container">
-        {cartArr.map(
-          (item, idx) =>
-            item[1] > 0 && (
-              <Card
-                key={idx}
-                selItem={Catalog.find((x) => x.name === Object.keys(cart)[idx])}
-                initialQuantity={cartValues[idx]}
-              />
-            )
-        )}
-
         {cartTotal === 0 ? (
           <h1 className="empty-cart">Your cart is empty.</h1>
         ) : (
-          <div className="cart__footer">
-            <h4>Total: ${cartTotal.toFixed(2)}</h4>
-            <button className="form__btn check-out__btn btn" onClick={checkOut}>
-              Check Out
-            </button>
+          <div className="row cart__row">
+            <div className="cart-cards">
+              <h2 className="cart__title">Shopping Cart</h2>
+              {cartArr.map(
+                (item, idx) =>
+                  item[1] > 0 && (
+                    <Card
+                      key={idx}
+                      selItem={Catalog.find(
+                        (x) => x.name === Object.keys(cart)[idx]
+                      )}
+                      initialQuantity={cartValues[idx]}
+                    />
+                  )
+              )}
+            </div>
+            <div className="cart__total">
+              <h4>Subtotal: ${cartTotal.toFixed(2)}</h4>
+              <button
+                className="form__btn check-out__btn btn"
+                onClick={checkOut}
+              >
+                Check Out
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -82,17 +91,17 @@ const Card = (props) => {
   const find = (param) => {
     switch (param) {
       case "black":
-        return <img src={black} alt="black" className="detail" />;
+        return <img src={black} alt="black" className="cart__img" />;
       case "coffee":
-        return <img src={coffee} alt="coffee" className="detail" />;
+        return <img src={coffee} alt="coffee" className="cart__img" />;
       case "pink":
-        return <img src={pink} alt="pink" className="detail" />;
+        return <img src={pink} alt="pink" className="cart__img" />;
       case "white":
-        return <img src={white} alt="white" className="detail" />;
+        return <img src={white} alt="white" className="cart__img" />;
       case "bright pink":
-        return <img src={brightpink} alt="bright pink" className="detail" />;
+        return <img src={brightpink} alt="bright pink" className="cart__img" />;
       case "brown":
-        return <img src={brown} alt="brown" className="detail" />;
+        return <img src={brown} alt="brown" className="cart__img" />;
       default:
         return null;
     }
