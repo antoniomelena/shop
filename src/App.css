@@ -148,9 +148,9 @@ a {
   transform-origin: left;
 }
 
-/* .nav__link.active::after {
+.nav__link.active::after {
   transform: scaleX(1);
-} */
+}
 
 .nav__link--relative {
   position: relative;
@@ -205,7 +205,7 @@ a {
 
 /* ****************************** */ /* *********** HOME ************* */ /* ****************************** */
 .intro {
-  /* background-image: "../images/pizza.jpg"; */
+  /* background-image: "../images/pink.webp"; */
   min-height: 660px;
   padding: 200px 0;
   text-align: center;

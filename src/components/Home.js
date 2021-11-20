@@ -5,7 +5,15 @@ import React from "react";
 const Home = () => {
   return (
     <div className="home">
-      <section className="intro">
+      <section
+        className="intro"
+        // style={{
+        //   backgroundImage: `url(${bpc})`,
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundPosition: "center",
+        //   backgroundSize: "cover",
+        // }}
+      >
         <div className="container">
           <h1 className="intro__title">Lorem ipsum dolor</h1>
           <h1 className="intro__title intro__title--colored">Lorem dolor</h1>
