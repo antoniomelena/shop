@@ -22,13 +22,8 @@ body {
   --bg-color-three: #7890b8;
   --color-black: #000;
   --color-white: #fff;
+  --bg-brown: #b88078;
 }
-/* :root {
-  --bg-header: rgba(245, 245, 245, 0.815);
-  --bg-color: #b88078;
-  --bg-color-accent: #78b8a0;
-  --bg-color-three: #7890b8;
-} */
 
 img {
   max-width: 100%;
@@ -220,7 +215,7 @@ col .btn:hover::after {
 }
 
 .section-three {
-  background-color: var(--bg-color-accent);
+  background-color: var(--bg-brown);
 }
 
 .iframe__wrapper {

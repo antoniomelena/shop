@@ -1,18 +1,18 @@
-import React from "react";
-// import pizza from "../images/pizza.jpg";
-// import bpc from "../images/bpcabove.webp";
+import React from 'react';
+
+import bpc from '../images/confetti.jpg';
 
 const Home = () => {
   return (
     <div className="home">
       <section
         className="intro"
-        // style={{
-        //   backgroundImage: `url(${bpc})`,
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundPosition: "center",
-        //   backgroundSize: "cover",
-        // }}
+        style={{
+          backgroundImage: `url(${bpc})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }}
       >
         <div className="container">
           <h1 className="intro__title">Lorem ipsum dolor</h1>
@@ -52,7 +52,7 @@ const Home = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
             </div>
           </div>
           <div className="col">
