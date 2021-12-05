@@ -1,6 +1,6 @@
 import React from 'react';
-
-import bpc from '../images/confetti.jpg';
+import confetti from '../images/confetti.jpg';
+import bpc from '../images/bpcabove.webp';
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <section
         className="intro"
         style={{
-          backgroundImage: `url(${bpc})`,
+          backgroundImage: `url(${confetti})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -32,12 +32,13 @@ const Home = () => {
               </p>
             </div>
             <div className="col">
-              <p>
+              <img src={bpc} alt="three bars of soap" />
+              {/* <p>
                 Felis donec et odio pellentesque diam volutpat. Aliquam purus
                 sit amet luctus venenatis. Turpis in eu mi bibendum neque
                 egestas congue quisque egestas. Pellentesque sit amet porttitor
                 eget dolor morbi non.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
