@@ -1,11 +1,11 @@
-import React, { useState, createContext } from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
-import "./App.css";
-import Nav from "./components/Nav";
-import Home from "./components/Home";
-import Shop from "./components/Shop";
-import Cart from "./components/Cart";
-import ItemDetail from "./components/ItemDetail";
+import React, { useState, createContext } from 'react';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import './App.css';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Shop from './components/Shop';
+import Cart from './components/Cart';
+import ItemDetail from './components/ItemDetail';
 
 export const App = () => {
   const [cart, setCart] = useState({});

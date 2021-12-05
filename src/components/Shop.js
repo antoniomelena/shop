@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import Catalog from "../catalog.json";
-import ShopCard from "./ShopCard";
-import SearchBar from "./SearchBar";
+import React, { useState } from 'react';
+import Catalog from '../catalog.json';
+import ShopCard from './ShopCard';
+import SearchBar from './SearchBar';
 
 const Shop = () => {
   const [items, setItems] = useState(Catalog);
-  const [filterText, setFilterText] = useState("");
+  const [filterText, setFilterText] = useState('');
 
   const handleUpVote = (productId) => {
     const newItems = items.map((item) => {

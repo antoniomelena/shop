@@ -1,12 +1,12 @@
-import React, { useState, useContext } from "react";
-import Catalog from "../catalog.json";
-import { UserContext } from "../App";
-import black from "../images/black.webp";
-import coffee from "../images/coffee.webp";
-import brown from "../images/brown.webp";
-import brightpink from "../images/brightpink.webp";
-import pink from "../images/pink.webp";
-import white from "../images/white.webp";
+import React, { useState, useContext } from 'react';
+import Catalog from '../catalog.json';
+import { UserContext } from '../App';
+import black from '../images/black.webp';
+import coffee from '../images/coffee.webp';
+import brown from '../images/brown.webp';
+import brightpink from '../images/brightpink.webp';
+import pink from '../images/pink.webp';
+import white from '../images/white.webp';
 // import pizza from "../images/pizza.jpg";
 
 const ItemDetail = ({ match }) => {
@@ -24,7 +24,7 @@ const ItemDetail = ({ match }) => {
         [item.name]: (cart[item.name] += parseInt(quantity, 10)),
       });
     }
-    document.querySelector(".product__form").reset();
+    document.querySelector('.product__form').reset();
   };
   const handleChange = ({ target }) => {
     setQuantity(target.value);
@@ -32,17 +32,17 @@ const ItemDetail = ({ match }) => {
 
   const find = (param) => {
     switch (param) {
-      case "black":
+      case 'black':
         return <img src={black} alt="black" className="detail" />;
-      case "coffee":
+      case 'coffee':
         return <img src={coffee} alt="coffee" className="detail" />;
-      case "pink":
+      case 'pink':
         return <img src={pink} alt="pink" className="detail" />;
-      case "white":
+      case 'white':
         return <img src={white} alt="white" className="detail" />;
-      case "bright pink":
+      case 'bright pink':
         return <img src={brightpink} alt="bright pink" className="detail" />;
-      case "brown":
+      case 'brown':
         return <img src={brown} alt="brown" className="detail" />;
       default:
         return null;

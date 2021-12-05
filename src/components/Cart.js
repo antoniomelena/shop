@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect } from "react";
-import { UserContext } from "../App";
-import Catalog from "../catalog.json";
-import black from "../images/black.webp";
-import coffee from "../images/coffee.webp";
-import brown from "../images/brown.webp";
-import brightpink from "../images/brightpink.webp";
-import pink from "../images/pink.webp";
-import white from "../images/white.webp";
+import React, { useContext, useState, useEffect } from 'react';
+import { UserContext } from '../App';
+import Catalog from '../catalog.json';
+import black from '../images/black.webp';
+import coffee from '../images/coffee.webp';
+import brown from '../images/brown.webp';
+import brightpink from '../images/brightpink.webp';
+import pink from '../images/pink.webp';
+import white from '../images/white.webp';
 
 const Cart = () => {
   const { cart, setCart } = useContext(UserContext);
@@ -85,22 +85,22 @@ const Card = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setCart({ ...cart, [name]: parseInt(quantity, 10) });
-    document.getElementById("cart-form").reset();
+    document.getElementById('cart-form').reset();
   };
 
   const find = (param) => {
     switch (param) {
-      case "black":
+      case 'black':
         return <img src={black} alt="black" className="cart__img" />;
-      case "coffee":
+      case 'coffee':
         return <img src={coffee} alt="coffee" className="cart__img" />;
-      case "pink":
+      case 'pink':
         return <img src={pink} alt="pink" className="cart__img" />;
-      case "white":
+      case 'white':
         return <img src={white} alt="white" className="cart__img" />;
-      case "bright pink":
+      case 'bright pink':
         return <img src={brightpink} alt="bright pink" className="cart__img" />;
-      case "brown":
+      case 'brown':
         return <img src={brown} alt="brown" className="cart__img" />;
       default:
         return null;
