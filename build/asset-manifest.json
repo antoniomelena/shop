@@ -1,14 +1,14 @@
 {
   "main.css": "static/css/main.7261b42b.css",
   "main.css.map": "static/css/main.7261b42b.css.map",
-  "main.js": "static/js/main.d530689a.js",
-  "main.js.map": "static/js/main.d530689a.js.map",
+  "main.js": "static/js/main.9cb47bcf.js",
+  "main.js.map": "static/js/main.9cb47bcf.js.map",
   "static/media/bck.jpg": "static/media/bck.a8c4a2f6.jpg",
-  "static/media/black.webp": "static/media/black.b83e96d7.webp",
   "static/media/bpcabove.webp": "static/media/bpcabove.c5fdbd6f.webp",
-  "static/media/brightpink.webp": "static/media/brightpink.d3910920.webp",
   "static/media/brown.webp": "static/media/brown.2257362a.webp",
+  "static/media/charcoal.webp": "static/media/charcoal.b83e96d7.webp",
   "static/media/coffee.webp": "static/media/coffee.9218f3b5.webp",
-  "static/media/pink.webp": "static/media/pink.6dadbd15.webp",
-  "static/media/white.webp": "static/media/white.64b1ca6b.webp"
+  "static/media/jasmine-gardenia.webp": "static/media/jasmine-gardenia.6dadbd15.webp",
+  "static/media/lavender.webp": "static/media/lavender.d3910920.webp",
+  "static/media/sea-salt-kelp.webp": "static/media/sea-salt-kelp.64b1ca6b.webp"
 }

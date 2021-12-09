@@ -15,7 +15,7 @@ const Home = () => {
         }}
       >
         <div className="container">
-          <h1 className=" intro__title intro__title--colored">Lorem dolor</h1>
+          <h1 className=" intro__title intro__title--colored">lorem dolor</h1>
           <h1 className="intro__title intro__title--black">
             Lorem ipsum dolor
           </h1>
