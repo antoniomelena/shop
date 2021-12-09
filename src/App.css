@@ -18,11 +18,10 @@ body {
 
 :root {
   --bg-color: #000;
-  --bg-color-accent: #ebacac;
+  --bg-color-accent: #168571;
   --bg-color-three: #7890b8;
   --color-black: #000;
   --color-white: #fff;
-  --bg-brown: #ebacac9f;
 }
 
 img {
@@ -206,16 +205,18 @@ col .btn:hover::after {
   color: var(--color-black);
 }
 
-.intro__title {
+.intro__title--black {
   font-size: 3rem;
 }
 
 .intro__title--colored {
-  color: var(--color-black);
+  font-size: 1.5rem;
+  color: var(--bg-color-accent);
 }
 
 .section-three {
-  background-color: var(--bg-brown);
+  background-color: var(--bg-color-accent);
+  color: #fff;
 }
 
 .iframe__wrapper {
@@ -440,7 +441,7 @@ col .btn:hover::after {
   }
 
   /* *********** home ************* */
-  .intro__title {
+  .intro__title--black {
     font-size: 3.75rem;
   }
 

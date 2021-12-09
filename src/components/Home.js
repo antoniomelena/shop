@@ -1,5 +1,5 @@
 import React from 'react';
-import confetti from '../images/confetti.jpg';
+import bck from '../images/bck.jpg';
 import bpc from '../images/bpcabove.webp';
 
 const Home = () => {
@@ -8,39 +8,17 @@ const Home = () => {
       <section
         className="intro"
         style={{
-          backgroundImage: `url(${confetti})`,
+          backgroundImage: `url(${bck})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
       >
         <div className="container">
-          <h1 className="intro__title">Lorem ipsum dolor</h1>
-          <h1 className="intro__title intro__title--colored">Lorem dolor</h1>
-        </div>
-      </section>
-      <section className="section-two">
-        <div className="container">
-          <h2>Quality</h2>
-          <div className="row">
-            <div className="col">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui
-                vivamus arcu felis bibendum ut tristique. Arcu dui vivamus arcu
-                felis. Sociis natoque penatibus et magnis dis.
-              </p>
-            </div>
-            <div className="col">
-              <img src={bpc} alt="three bars of soap" />
-              {/* <p>
-                Felis donec et odio pellentesque diam volutpat. Aliquam purus
-                sit amet luctus venenatis. Turpis in eu mi bibendum neque
-                egestas congue quisque egestas. Pellentesque sit amet porttitor
-                eget dolor morbi non.
-              </p> */}
-            </div>
-          </div>
+          <h1 className=" intro__title intro__title--colored">Lorem dolor</h1>
+          <h1 className="intro__title intro__title--black">
+            Lorem ipsum dolor
+          </h1>
         </div>
       </section>
       <section className="section-three">
@@ -65,6 +43,24 @@ const Home = () => {
               excepturi nostrum porro nisi. Debitis quae, cumque eligendi
               tempora suscipit quisquam esse consequatur.
             </p>
+          </div>
+        </div>
+      </section>
+      <section className="section-two">
+        <div className="container">
+          <h2>Quality</h2>
+          <div className="row">
+            <div className="col">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui
+                vivamus arcu felis bibendum ut tristique. Arcu dui vivamus arcu
+                felis. Sociis natoque penatibus et magnis dis.
+              </p>
+            </div>
+            <div className="col">
+              <img src={bpc} alt="three bars of soap" />
+            </div>
           </div>
         </div>
       </section>

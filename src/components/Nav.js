@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { UserContext } from "../App";
-import logo from "../images/shop-logo.webp";
+import React, { useContext, useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { UserContext } from '../App';
+import logo from '../images/logo.png';
 
 const Nav = () => {
   const { cart } = useContext(UserContext);
@@ -23,7 +23,7 @@ const Nav = () => {
         <Link exact to="/" className="logo">
           <img src={logo} alt="logo" />
         </Link>
-        <nav className={click ? "nav nav--visible" : "nav"}>
+        <nav className={click ? 'nav nav--visible' : 'nav'}>
           <ul className="nav__list nav__list--primary">
             <li className="nav__item">
               <NavLink

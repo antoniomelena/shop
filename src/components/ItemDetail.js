@@ -7,7 +7,6 @@ import brown from '../images/brown.webp';
 import brightpink from '../images/brightpink.webp';
 import pink from '../images/pink.webp';
 import white from '../images/white.webp';
-// import pizza from "../images/pizza.jpg";
 
 const ItemDetail = ({ match }) => {
   const { cart, setCart } = useContext(UserContext);
