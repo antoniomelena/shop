@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import Catalog from '../catalog.json';
 import { UserContext } from '../App';
 import charcoal from '../images/charcoal.webp';
-import coffee from '../images/coffee.webp';
-import brown from '../images/brown.webp';
+import cocoaMint from '../images/cocoa-mint.webp';
+import oatsHoney from '../images/oats&honey.webp';
 import lavender from '../images/lavender.webp';
 import jasmine from '../images/jasmine-gardenia.webp';
 import seaSaltKelp from '../images/sea-salt-kelp.webp';
@@ -35,8 +35,10 @@ const ItemDetail = ({ match }) => {
         return (
           <img src={charcoal} alt="charcoal soap bar" className="detail" />
         );
-      case 'coffee':
-        return <img src={coffee} alt="coffee" className="detail" />;
+      case 'cocoa-mint':
+        return (
+          <img src={cocoaMint} alt="cocoa mint soap bar" className="detail" />
+        );
       case 'jasmine-gardenia':
         return <img src={jasmine} alt="jasmine soap bar" className="detail" />;
       case 'sea-salt-kelp':
@@ -51,8 +53,14 @@ const ItemDetail = ({ match }) => {
         return (
           <img src={lavender} alt="lavender soap bar" className="detail" />
         );
-      case 'brown':
-        return <img src={brown} alt="brown" className="detail" />;
+      case 'oats&honey':
+        return (
+          <img
+            src={oatsHoney}
+            alt="oats and honey soap bar"
+            className="detail"
+          />
+        );
       default:
         return null;
     }

@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { UserContext } from '../App';
 import Catalog from '../catalog.json';
 import charcoal from '../images/charcoal.webp';
-import coffee from '../images/coffee.webp';
-import brown from '../images/brown.webp';
+import cocoaMint from '../images/cocoa-mint.webp';
+import oatsHoney from '../images/oats&honey.webp';
 import lavender from '../images/lavender.webp';
 import jasmine from '../images/jasmine-gardenia.webp';
 import seaSaltKelp from '../images/sea-salt-kelp.webp';
@@ -94,8 +94,14 @@ const Card = (props) => {
         return (
           <img src={charcoal} alt="charcoal soap bar" className="cart__img" />
         );
-      case 'coffee':
-        return <img src={coffee} alt="coffee" className="cart__img" />;
+      case 'cocoa-mint':
+        return (
+          <img
+            src={cocoaMint}
+            alt="cocoa mint soap bar"
+            className="cart__img"
+          />
+        );
       case 'jasmine':
         return (
           <img src={jasmine} alt="jasmine soap bar" className="cart__img" />
@@ -112,8 +118,14 @@ const Card = (props) => {
         return (
           <img src={lavender} alt="lavender soap bar" className="cart__img" />
         );
-      case 'brown':
-        return <img src={brown} alt="brown" className="cart__img" />;
+      case 'oats&honey':
+        return (
+          <img
+            src={oatsHoney}
+            alt="oats and honey soap bar"
+            className="cart__img"
+          />
+        );
       default:
         return null;
     }

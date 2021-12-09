@@ -2,8 +2,8 @@ import React from 'react';
 import { AiFillHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import charcoal from '../images/charcoal.webp';
-import coffee from '../images/coffee.webp';
-import brown from '../images/brown.webp';
+import cocoaMint from '../images/cocoa-mint.webp';
+import oatsHoney from '../images/oats&honey.webp';
 import lavender from '../images/lavender.webp';
 import jasmine from '../images/jasmine-gardenia.webp';
 import seaSaltKelp from '../images/sea-salt-kelp.webp';
@@ -15,9 +15,13 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
         return (
           <img src={charcoal} alt="charcoal soap bar" className="responsive" />
         );
-      case 'coffee':
+      case 'cocoa-mint':
         return (
-          <img src={coffee} alt="coffee soap bar" className="responsive" />
+          <img
+            src={cocoaMint}
+            alt="cocoa-mint soap bar"
+            className="responsive"
+          />
         );
       case 'jasmine-gardenia':
         return (
@@ -35,8 +39,14 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
         return (
           <img src={lavender} alt="lavender soap bar" className="responsive" />
         );
-      case 'brown':
-        return <img src={brown} alt="brown soap bar" className="responsive" />;
+      case 'oats&honey':
+        return (
+          <img
+            src={oatsHoney}
+            alt="oats and honey soap bar"
+            className="responsive"
+          />
+        );
       default:
         return null;
     }
