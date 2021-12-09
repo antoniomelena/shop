@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
 import Catalog from '../catalog.json';
 import { UserContext } from '../App';
-import black from '../images/black.webp';
+import charcoal from '../images/charcoal.webp';
 import coffee from '../images/coffee.webp';
 import brown from '../images/brown.webp';
-import brightpink from '../images/brightpink.webp';
-import pink from '../images/pink.webp';
-import white from '../images/white.webp';
+import lavender from '../images/lavender.webp';
+import jasmine from '../images/jasmine-gardenia.webp';
+import seaSaltKelp from '../images/sea-salt-kelp.webp';
 
 const ItemDetail = ({ match }) => {
   const { cart, setCart } = useContext(UserContext);
@@ -31,16 +31,26 @@ const ItemDetail = ({ match }) => {
 
   const find = (param) => {
     switch (param) {
-      case 'black':
-        return <img src={black} alt="black" className="detail" />;
+      case 'charcoal':
+        return (
+          <img src={charcoal} alt="charcoal soap bar" className="detail" />
+        );
       case 'coffee':
         return <img src={coffee} alt="coffee" className="detail" />;
-      case 'pink':
-        return <img src={pink} alt="pink" className="detail" />;
-      case 'white':
-        return <img src={white} alt="white" className="detail" />;
-      case 'bright pink':
-        return <img src={brightpink} alt="bright pink" className="detail" />;
+      case 'jasmine-gardenia':
+        return <img src={jasmine} alt="jasmine soap bar" className="detail" />;
+      case 'sea-salt-kelp':
+        return (
+          <img
+            src={seaSaltKelp}
+            alt="sea salt kelp soap bar"
+            className="detail"
+          />
+        );
+      case 'lavender':
+        return (
+          <img src={lavender} alt="lavender soap bar" className="detail" />
+        );
       case 'brown':
         return <img src={brown} alt="brown" className="detail" />;
       default:

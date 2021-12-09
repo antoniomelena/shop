@@ -1,18 +1,18 @@
 [
   {
-    "id": "black",
+    "id": "charcoal",
     "name": "Tea Tree & Charcoal",
     "price": 6.99,
     "votes": 7
   },
   {
-    "id": "pink",
+    "id": "jasmine-gardenia",
     "name": "Jasmine Gardenia",
     "price": 6.99,
     "votes": 4
   },
   {
-    "id": "white",
+    "id": "sea-salt-kelp",
     "name": "Sea Salt Kelp",
     "price": 7.99,
     "votes": 9,
@@ -25,7 +25,7 @@
     "votes": 1
   },
   {
-    "id": "bright pink",
+    "id": "lavender",
     "name": "Lavender",
     "price": 4.99,
     "votes": 2
