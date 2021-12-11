@@ -265,7 +265,7 @@ col .btn:hover::after {
 .heart {
   display: flex;
   justify-content: start;
-  padding: 0 5px;
+  padding: 5px 15px;
   align-items: center;
 }
 
