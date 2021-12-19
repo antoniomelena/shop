@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 
-export const App = () => {
+export const App = function () {
   const [cart, setCart] = useState({});
 
   return (

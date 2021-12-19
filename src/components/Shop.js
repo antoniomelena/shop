@@ -3,15 +3,15 @@ import Catalog from '../catalog.json';
 import ShopCard from './ShopCard';
 import SearchBar from './SearchBar';
 
-const Shop = () => {
-  const [items, setItems] = useState(Catalog);
+const Shop = function () {
+  const [items] = useState(Catalog);
   const [filterText, setFilterText] = useState('');
 
-  const handleFilterChange = (filterText) => {
-    setFilterText(filterText);
+  const handleFilterChange = (text) => {
+    setFilterText(text);
   };
 
-  let cards = [];
+  const cards = [];
   items.forEach((item) => {
     if (item.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
       return;

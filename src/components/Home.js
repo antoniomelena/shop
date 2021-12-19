@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import bpc from '../images/bpcabove.webp';
 import hero from '../images/hero.webp';
 
-const Home = () => {
+const Home = function () {
   return (
     <div className="home">
       <section
@@ -21,7 +21,11 @@ const Home = () => {
             Suds That Soothe
           </h1>
           <Link exact to="/products">
-            <button href="/products" className="button hero-button">
+            <button
+              href="/products"
+              className="button hero-button"
+              type="button"
+            >
               Buy Now
             </button>
           </Link>

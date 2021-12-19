@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import Catalog from '../catalog.json';
 import { UserContext } from '../App';
 import charcoal from '../images/charcoal.webp';
@@ -8,7 +9,7 @@ import lavender from '../images/lavender.webp';
 import jasmine from '../images/jasmine-gardenia.webp';
 import seaSaltKelp from '../images/sea-salt-kelp.webp';
 
-const ShopCard = ({ id, name, price }) => {
+const ShopCard = function ({ id, name, price }) {
   const { cart, setCart } = useContext(UserContext);
   const [quantity, setQuantity] = useState(null);
   const item = Catalog.find((x) => x.id === id);
@@ -66,7 +67,7 @@ const ShopCard = ({ id, name, price }) => {
         [item.name]: (cart[item.name] += parseInt(quantity, 10)),
       });
     }
-    document.querySelector('.product-form').reset();
+    // document.querySelector('.product-form').reset();
   };
 
   const handleChange = ({ target }) => {
@@ -96,6 +97,12 @@ const ShopCard = ({ id, name, price }) => {
       </form>
     </div>
   );
+};
+
+ShopCard.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.number,
 };
 
 export default ShopCard;

@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { UserContext } from '../App';
 import logo from '../images/logo.webp';
 
-const Nav = () => {
+const Nav = function () {
   const { cart } = useContext(UserContext);
   const entries = Object.entries(cart);
   const values = Object.values(cart);
