@@ -2,39 +2,31 @@
   {
     "id": "charcoal",
     "name": "Tea Tree & Charcoal",
-    "price": 6.99,
-    "votes": 7
+    "price": 6.99
   },
   {
     "id": "jasmine-gardenia",
     "name": "Jasmine Gardenia",
-    "price": 6.99,
-    "votes": 4
+    "price": 6.99
   },
   {
     "id": "sea-salt-kelp",
     "name": "Sea Salt Kelp",
-    "price": 7.99,
-    "votes": 9,
-    "stocked": false
+    "price": 7.99
   },
   {
     "id": "cocoa-mint",
     "name": "Cocoa Mint",
-    "price": 5.99,
-    "votes": 1
+    "price": 5.99
   },
   {
     "id": "lavender",
     "name": "Lavender",
-    "price": 4.99,
-    "votes": 2
+    "price": 4.99
   },
   {
     "id": "oats&honey",
     "name": "Oats & Honey",
-    "price": 6.99,
-    "votes": 2,
-    "stocked": false
+    "price": 6.99
   }
 ]
