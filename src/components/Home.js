@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bck from '../images/bck.jpg';
+// import bck from '../images/bck.jpg';
 import bpc from '../images/bpcabove.webp';
 import hero from '../images/hero.jpg';
 
