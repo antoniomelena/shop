@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { UserContext } from '../App';
-import Catalog from '../catalog.json';
-import charcoal from '../images/charcoal.webp';
-import cocoaMint from '../images/cocoa-mint.webp';
-import oatsHoney from '../images/oats&honey.webp';
-import lavender from '../images/lavender.webp';
-import jasmine from '../images/jasmine-gardenia.webp';
-import seaSaltKelp from '../images/sea-salt-kelp.webp';
+import React, { useContext, useState, useEffect } from "react";
+import { UserContext } from "../App";
+import Catalog from "../catalog.json";
+import charcoal from "../images/charcoal.webp";
+import cocoaMint from "../images/cocoa-mint.webp";
+import oatsHoney from "../images/oats&honey.webp";
+import lavender from "../images/lavender.webp";
+import jasmine from "../images/jasmine-gardenia.webp";
+import seaSaltKelp from "../images/sea-salt-kelp.webp";
 
 const Cart = function () {
   const { cart, setCart } = useContext(UserContext);
@@ -82,16 +82,16 @@ const Card = function (props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setCart({ ...cart, [name]: parseInt(quantity, 10) });
-    document.getElementById('cart-form').reset();
+    document.getElementById("cart-form").reset();
   };
 
   const find = (param) => {
     switch (param) {
-      case 'charcoal':
+      case "charcoal":
         return (
           <img src={charcoal} alt="charcoal soap bar" className="cart__img" />
         );
-      case 'cocoa-mint':
+      case "cocoa-mint":
         return (
           <img
             src={cocoaMint}
@@ -99,11 +99,11 @@ const Card = function (props) {
             className="cart__img"
           />
         );
-      case 'jasmine-gardenia':
+      case "jasmine-gardenia":
         return (
           <img src={jasmine} alt="jasmine soap bar" className="cart__img" />
         );
-      case 'sea-salt-kelp':
+      case "sea-salt-kelp":
         return (
           <img
             src={seaSaltKelp}
@@ -111,11 +111,11 @@ const Card = function (props) {
             className="cart__img"
           />
         );
-      case 'lavender':
+      case "lavender":
         return (
           <img src={lavender} alt="lavender soap bar" className="cart__img" />
         );
-      case 'oats&honey':
+      case "oats&honey":
         return (
           <img
             src={oatsHoney}
