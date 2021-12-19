@@ -15,8 +15,8 @@ export const App = () => {
       <UserContext.Provider value={{ cart, setCart }}>
         <Nav />
         <Switch>
-          <Route exact path="/products/:id" component={ItemDetail} />
-          <Route path="/products" component={Shop} />
+          <Route exact path="/shop/:id" component={ItemDetail} />
+          <Route path="/shop" component={Shop} />
           <Route path="/cart" component={Cart} />
           <Route exact path="/" component={Home} />
         </Switch>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bck from '../images/bck.jpg';
 import bpc from '../images/bpcabove.webp';
 
@@ -15,10 +16,20 @@ const Home = () => {
         }}
       >
         <div className="container">
-          <h1 className=" intro__title intro__title--colored">lorem dolor</h1>
-          <h1 className="intro__title intro__title--black">
-            Lorem ipsum dolor
-          </h1>
+          <div className="intro-container">
+            <div className="intro-text">
+              <h1 className=" intro__title intro__title--colored">
+                the soap shop
+              </h1>
+              <h1 className="intro__title intro__title--black">Luna Sea</h1>
+              <Link exact to="/shop">
+                <button href="/shop" className="button">
+                  Buy Now
+                </button>
+              </Link>
+            </div>
+            {/* <img src={bpc} className="intro-img" alt="three bars of soap" /> */}
+          </div>
         </div>
       </section>
       <section className="section-three">
@@ -48,9 +59,9 @@ const Home = () => {
       </section>
       <section className="section-two">
         <div className="container">
-          <h2>Quality</h2>
           <div className="row">
             <div className="col">
+              <h2>Quality</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui
