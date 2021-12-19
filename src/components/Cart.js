@@ -8,7 +8,7 @@ import lavender from '../images/lavender.webp';
 import jasmine from '../images/jasmine-gardenia.webp';
 import seaSaltKelp from '../images/sea-salt-kelp.webp';
 
-const Cart = () => {
+const Cart = function () {
   const { cart, setCart } = useContext(UserContext);
   const cartArr = Object.entries(cart);
   const cartValues = Object.values(cart);
@@ -16,11 +16,11 @@ const Cart = () => {
 
   const cartCalculation = () => {
     let sum = 0;
-    let keys = Object.keys(cart);
+    const keys = Object.keys(cart);
     keys.forEach((name, idx) => {
-      let product = Catalog.find((prod) => prod.name === name);
-      let price = product.price;
-      let total = Object.values(cart)[idx] * price;
+      const product = Catalog.find((prod) => prod.name === name);
+      const { price } = product;
+      const total = Object.values(cart)[idx] * price;
       sum += total;
     });
     setCartTotal(sum);
@@ -70,9 +70,9 @@ const Cart = () => {
   );
 };
 
-const Card = (props) => {
+const Card = function (props) {
   const { initialQuantity, selItem } = props;
-  const name = selItem.name;
+  const { name } = selItem;
   const { cart, setCart } = useContext(UserContext);
   const [quantity, setQuantity] = useState(initialQuantity);
 
