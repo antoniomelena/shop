@@ -1,14 +1,15 @@
 {
-  "main.css": "static/css/main.962c2e0d.css",
-  "main.css.map": "static/css/main.962c2e0d.css.map",
-  "main.js": "static/js/main.b772b28a.js",
-  "main.js.map": "static/js/main.b772b28a.js.map",
+  "main.css": "static/css/main.3bd08d01.css",
+  "main.css.map": "static/css/main.3bd08d01.css.map",
+  "main.js": "static/js/main.9c72e6b4.js",
+  "main.js.map": "static/js/main.9c72e6b4.js.map",
   "static/media/bpcabove.webp": "static/media/bpcabove.c5fdbd6f.webp",
   "static/media/charcoal.webp": "static/media/charcoal.b83e96d7.webp",
   "static/media/cocoa-mint.webp": "static/media/cocoa-mint.9218f3b5.webp",
   "static/media/hero.webp": "static/media/hero.68de9265.webp",
   "static/media/jasmine-gardenia.webp": "static/media/jasmine-gardenia.6dadbd15.webp",
   "static/media/lavender.webp": "static/media/lavender.d3910920.webp",
+  "static/media/logo.webp": "static/media/logo.148153f7.webp",
   "static/media/oats&honey.webp": "static/media/oats&honey.2257362a.webp",
   "static/media/sea-salt-kelp.webp": "static/media/sea-salt-kelp.64b1ca6b.webp"
 }
