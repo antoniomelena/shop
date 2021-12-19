@@ -458,11 +458,6 @@ col .btn:hover::after {
     margin-bottom: 1rem;
   }
 
-  /* .intro-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  } */
-
   /* ***** cart ***** */
   .cart__img {
     width: 230px;

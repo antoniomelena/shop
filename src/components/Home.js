@@ -16,21 +16,15 @@ const Home = () => {
         }}
       >
         <div className="container">
-          <div className="intro-container row">
-            <div className="intro-text col">
-              <h1 className=" intro__title intro__title--colored">
-                the soap shop
-              </h1>
-              <h1 className="intro__title intro__title--regular">
-                Suds That Soothe
-              </h1>
-              <Link exact to="/products">
-                <button href="/products" className="button">
-                  Buy Now
-                </button>
-              </Link>
-            </div>
-          </div>
+          <h1 className=" intro__title intro__title--colored">the soap shop</h1>
+          <h1 className="intro__title intro__title--regular">
+            Suds That Soothe
+          </h1>
+          <Link exact to="/products">
+            <button href="/products" className="button">
+              Buy Now
+            </button>
+          </Link>
         </div>
       </section>
       <section className="section-three">
