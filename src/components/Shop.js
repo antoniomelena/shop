@@ -24,10 +24,10 @@ const Shop = () => {
     setFilterText(filterText);
   };
 
-  const newItems = items.sort((a, b) => b.votes - a.votes);
+  // const newItems = items.sort((a, b) => b.votes - a.votes);
 
   let cards = [];
-  newItems.forEach((item) => {
+  items.forEach((item) => {
     if (item.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
       return;
     }
@@ -36,9 +36,9 @@ const Shop = () => {
         key={item.id}
         id={item.id}
         name={item.name}
-        votes={item.votes}
         price={item.price.toFixed(2)}
-        onVote={handleUpVote}
+        // votes={item.votes}
+        // onVote={handleUpVote}
       />
     );
   });

@@ -57,10 +57,10 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
   };
   return (
     <div className="card">
-      <div className="heart">
+      {/* <div className="heart">
         <HiOutlineThumbUp className="thumb-icon" onClick={handleUpVote} />
         <p>{votes}</p>
-      </div>
+      </div> */}
       <Link to={`/products/${id}`}>
         <div className="img-box">{find(id)}</div>
         <div className="card-text">
