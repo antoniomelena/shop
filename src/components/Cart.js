@@ -102,7 +102,7 @@ const Card = (props) => {
             className="cart__img"
           />
         );
-      case 'jasmine':
+      case 'jasmine-gardenia':
         return (
           <img src={jasmine} alt="jasmine soap bar" className="cart__img" />
         );
