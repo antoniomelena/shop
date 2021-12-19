@@ -132,10 +132,9 @@ const Card = (props) => {
     <div className="cart--card">
       {find(selItem.id)}
       <div className="cart__card-text">
-        <div className="card--cart-txt">{selItem.name}</div>
-        <div className="card--cart-txt">${selItem.price.toFixed(2)}</div>
+        <h2>{selItem.name}</h2>
+        <p>${selItem.price.toFixed(2)}</p>
         <form id="cart-form" className="card-form" onSubmit={handleSubmit}>
-          <label htmlFor="quantity">Quantity: </label>
           <input
             type="number"
             id="quantity"
