@@ -23,7 +23,9 @@ const Home = () => {
               <h1 className=" intro__title intro__title--colored">
                 the soap shop
               </h1>
-              <h1 className="intro__title intro__title--regular">Luna Sea</h1>
+              <h1 className="intro__title intro__title--regular">
+                Suds That Soothe
+              </h1>
               <Link exact to="/shop">
                 <button href="/shop" className="button">
                   Buy Now
