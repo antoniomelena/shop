@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import bck from '../images/bck.jpg';
 import bpc from '../images/bpcabove.webp';
+import hero from '../images/hero.jpg';
 
 const Home = () => {
   return (
@@ -9,26 +10,29 @@ const Home = () => {
       <section
         className="intro"
         style={{
-          backgroundImage: `url(${bck})`,
+          backgroundImage: `url(${hero})`,
+          // backgroundImage: `url(${bck})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
       >
         <div className="container">
-          <div className="intro-container">
-            <div className="intro-text">
+          <div className="intro-container row">
+            <div className="intro-text col">
               <h1 className=" intro__title intro__title--colored">
                 the soap shop
               </h1>
-              <h1 className="intro__title intro__title--black">Luna Sea</h1>
+              <h1 className="intro__title intro__title--regular">Luna Sea</h1>
               <Link exact to="/shop">
                 <button href="/shop" className="button">
                   Buy Now
                 </button>
               </Link>
             </div>
-            {/* <img src={bpc} className="intro-img" alt="three bars of soap" /> */}
+            {/* <div className="col">
+              <img src={bpc} className="intro-img " alt="three bars of soap" />
+            </div> */}
           </div>
         </div>
       </section>

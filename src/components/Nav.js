@@ -45,8 +45,6 @@ const Nav = () => {
                 Shop
               </NavLink>
             </li>
-          </ul>
-          <ul className="nav__list nav__list--secondary">
             <li className="nav__item">
               <NavLink
                 exact

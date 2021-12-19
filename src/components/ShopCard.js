@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiFillHeart } from 'react-icons/ai';
+import { HiOutlineThumbUp } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import charcoal from '../images/charcoal.webp';
 import cocoaMint from '../images/cocoa-mint.webp';
@@ -58,7 +58,7 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
   return (
     <div className="card">
       <div className="heart">
-        <AiFillHeart className="heart-icon" onClick={handleUpVote} />
+        <HiOutlineThumbUp className="thumb-icon" onClick={handleUpVote} />
         <p>{votes}</p>
       </div>
       <Link to={`/shop/${id}`}>
