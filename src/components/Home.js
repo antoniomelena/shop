@@ -21,7 +21,7 @@ const Home = () => {
             Suds That Soothe
           </h1>
           <Link exact to="/products">
-            <button href="/products" className="button">
+            <button href="/products" className="button hero-button">
               Buy Now
             </button>
           </Link>

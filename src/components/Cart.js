@@ -59,10 +59,7 @@ const Cart = () => {
             </div>
             <div className="cart__total">
               <h4>Subtotal: ${cartTotal.toFixed(2)}</h4>
-              <button
-                className="form__btn check-out__btn btn"
-                onClick={checkOut}
-              >
+              <button className="button check-out-button" onClick={checkOut}>
                 Check Out
               </button>
             </div>
@@ -149,7 +146,7 @@ const Card = (props) => {
             onChange={handleChange}
             required
           />
-          <button type="submit" className="form__btn btn">
+          <button type="submit" className="form-button button">
             Update
           </button>
         </form>

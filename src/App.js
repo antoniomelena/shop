@@ -5,7 +5,6 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
-import ItemDetail from './components/ItemDetail';
 
 export const App = () => {
   const [cart, setCart] = useState({});
@@ -15,7 +14,6 @@ export const App = () => {
       <UserContext.Provider value={{ cart, setCart }}>
         <Nav />
         <Switch>
-          <Route exact path="/products/:id" component={ItemDetail} />
           <Route path="/products" component={Shop} />
           <Route path="/cart" component={Cart} />
           <Route exact path="/" component={Home} />

@@ -7,24 +7,9 @@ const Shop = () => {
   const [items, setItems] = useState(Catalog);
   const [filterText, setFilterText] = useState('');
 
-  const handleUpVote = (productId) => {
-    const newItems = items.map((item) => {
-      if (item.id === productId) {
-        return Object.assign({}, item, {
-          votes: item.votes + 1,
-        });
-      } else {
-        return item;
-      }
-    });
-    setItems(newItems);
-  };
-
   const handleFilterChange = (filterText) => {
     setFilterText(filterText);
   };
-
-  // const newItems = items.sort((a, b) => b.votes - a.votes);
 
   let cards = [];
   items.forEach((item) => {
@@ -37,8 +22,6 @@ const Shop = () => {
         id={item.id}
         name={item.name}
         price={item.price.toFixed(2)}
-        // votes={item.votes}
-        // onVote={handleUpVote}
       />
     );
   });

@@ -1,6 +1,6 @@
-import React from 'react';
-import { HiOutlineThumbUp } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import Catalog from '../catalog.json';
+import { UserContext } from '../App';
 import charcoal from '../images/charcoal.webp';
 import cocoaMint from '../images/cocoa-mint.webp';
 import oatsHoney from '../images/oats&honey.webp';
@@ -8,7 +8,11 @@ import lavender from '../images/lavender.webp';
 import jasmine from '../images/jasmine-gardenia.webp';
 import seaSaltKelp from '../images/sea-salt-kelp.webp';
 
-const ShopCard = ({ id, name, price, votes, onVote }) => {
+const ShopCard = ({ id, name, price }) => {
+  const { cart, setCart } = useContext(UserContext);
+  const [quantity, setQuantity] = useState(null);
+  const item = Catalog.find((x) => x.id === id);
+
   const find = (param) => {
     switch (param) {
       case 'charcoal':
@@ -52,22 +56,44 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
     }
   };
 
-  const handleUpVote = () => {
-    onVote(id);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!cart.hasOwnProperty(item.name)) {
+      setCart({ ...cart, [item.name]: parseInt(quantity, 10) });
+    } else {
+      setCart({
+        ...cart,
+        [item.name]: (cart[item.name] += parseInt(quantity, 10)),
+      });
+    }
+    document.querySelector('.product-form').reset();
   };
+
+  const handleChange = ({ target }) => {
+    setQuantity(target.value);
+  };
+
   return (
     <div className="card">
-      {/* <div className="heart">
-        <HiOutlineThumbUp className="thumb-icon" onClick={handleUpVote} />
-        <p>{votes}</p>
-      </div> */}
-      <Link to={`/products/${id}`}>
-        <div className="img-box">{find(id)}</div>
-        <div className="card-text">
-          <h4>{name}</h4>
-          <p>from ${price}</p>
-        </div>
-      </Link>
+      <div className="img-box">{find(id)}</div>
+      <div className="card-text">
+        <h4>{name}</h4>
+        <p>from ${price}</p>
+      </div>
+      <form className="product-form" onSubmit={handleSubmit}>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          max="50"
+          onChange={handleChange}
+          required
+        />
+        <button className="button form-button check-out-button" type="submit">
+          Add To Cart
+        </button>
+      </form>
     </div>
   );
 };
