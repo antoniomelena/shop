@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import bck from '../images/bck.jpg';
 import bpc from '../images/bpcabove.webp';
 import hero from '../images/hero.jpg';
 
@@ -11,7 +10,6 @@ const Home = () => {
         className="intro"
         style={{
           backgroundImage: `url(${hero})`,
-          // backgroundImage: `url(${bck})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -26,15 +24,12 @@ const Home = () => {
               <h1 className="intro__title intro__title--regular">
                 Suds That Soothe
               </h1>
-              <Link exact to="/shop">
-                <button href="/shop" className="button">
+              <Link exact to="/products">
+                <button href="/products" className="button">
                   Buy Now
                 </button>
               </Link>
             </div>
-            {/* <div className="col">
-              <img src={bpc} className="intro-img " alt="three bars of soap" />
-            </div> */}
           </div>
         </div>
       </section>

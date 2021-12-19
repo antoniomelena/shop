@@ -61,7 +61,7 @@ const ShopCard = ({ id, name, price, votes, onVote }) => {
         <HiOutlineThumbUp className="thumb-icon" onClick={handleUpVote} />
         <p>{votes}</p>
       </div>
-      <Link to={`/shop/${id}`}>
+      <Link to={`/products/${id}`}>
         <div className="img-box">{find(id)}</div>
         <div className="card-text">
           <h4>{name}</h4>

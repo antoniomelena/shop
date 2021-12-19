@@ -38,7 +38,7 @@ const Nav = () => {
             <li className="nav__item">
               <NavLink
                 exact
-                to="/shop"
+                to="/products"
                 className="nav__link"
                 activeClassName="active"
               >
